@@ -1,0 +1,11 @@
+# Partial Crontab Showing D-Star W8HHF Crontab Jobs
+#
+# Note that there is no password when logging into the W8HHF server, it is using RSA public key pair to login
+# You can setup that as shown in the readme for this repository
+#
+# m h  dom mon dow   command
+# Following one is no longer used
+# 0 * * * * php /home/zburns/scripts/w8hhf/dstar/check_for_new_dstar_registrations.php >> /home/zburns/cronjobs.log 2>&1
+#
+# Grab new D-Star Users at 5 minutes after the hour each hour every day of the year
+5 * * * * /usr/bin/scp -P 2222 n8zak@w8hhf.dstargateway.org:/home/n8zak/w8hhf_dstar_users_new.txt /home/zburns/public_html

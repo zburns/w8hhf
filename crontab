@@ -1,0 +1,3 @@
+# This will do some D-Star Query every 5 minutes for new and current users
+
+*/5 * * * * /home/n8zak/query_dstar_to_html_file
